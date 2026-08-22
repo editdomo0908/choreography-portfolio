@@ -1,0 +1,228 @@
+/* =========================================
+   Home / Hero
+========================================= */
+
+#home {
+    position: sticky;
+    top: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+
+.home__video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   Main Page Content
+========================================= */
+
+.page-content {
+    position: relative;
+
+    z-index: 2;
+
+    background: #fff;
+}
+
+
+
+
+
+
+
+.home__subtitle {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+    color: #fff;
+}
+
+
+.welcome-title {
+    display: flex;
+
+    margin-left: 10%;
+
+    font-family: "Monoton", sans-serif;
+    font-size: clamp(3rem, 3vw, 3rem);
+    font-weight: 400;
+
+    line-height: 1;
+    text-transform: lowercase;
+
+    opacity: 1;
+
+
+    span {
+        display: inline-block;
+        opacity: 0;
+    }
+}
+
+
+
+   @media (max-width: 767.98px) {
+
+    .home__subtitle {
+        left: 20px;
+    }
+
+    .welcome-title {
+        font-size: clamp(2rem, 2vw, 2rem) !important;
+    }
+}
+
+/* =========================================
+   PLAY ANIMATION
+========================================= */
+
+/* =========================================
+   WELCOME LETTER ANIMATION
+========================================= */
+
+.welcome-title {
+
+    span {
+        display: inline-block;
+        opacity: 0;
+    }
+}
+
+
+.welcome-title.is-animating {
+
+    span:nth-child(odd) {
+        animation: drawLetterFromLeft 0.65s
+            cubic-bezier(.77, 0, .18, 1)
+            forwards;
+    }
+
+    span:nth-child(even) {
+        animation: drawLetterFromRight 0.65s
+            cubic-bezier(.77, 0, .18, 1)
+            forwards;
+    }
+
+
+    span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    span:nth-child(2) {
+        animation-delay: 0.12s;
+    }
+
+    span:nth-child(3) {
+        animation-delay: 0.24s;
+    }
+
+    span:nth-child(4) {
+        animation-delay: 0.36s;
+    }
+
+    span:nth-child(5) {
+        animation-delay: 0.48s;
+    }
+
+    span:nth-child(6) {
+        animation-delay: 0.60s;
+    }
+
+    span:nth-child(7) {
+        animation-delay: 0.72s;
+    }
+}
+
+
+/* From left */
+
+@keyframes drawLetterFromLeft {
+
+    0% {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+        transform: translateX(-12px);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transform: translateX(0);
+    }
+}
+
+
+/* From right */
+
+@keyframes drawLetterFromRight {
+
+    0% {
+        opacity: 0;
+        clip-path: inset(0 0 0 100%);
+        transform: translateX(12px);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transform: translateX(0);
+    }
+}
+
+/* Fade AFTER JS adds this class 
+
+.welcome-title.is-fading {
+    animation: fadeWelcome 1.5s ease forwards;
+}
+
+
+@keyframes fadeWelcome {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+*/
+
+/* Mobile */
+
+@media (max-width: 767.98px) {
+
+    .home__subtitle {
+        left: 20px;
+    }
+
+    .welcome-title {
+        font-size: clamp(3rem, 16vw, 6rem);
+    }
+}

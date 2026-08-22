@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Edit Domoszlai">
+    <meta name="author" content="Edit Domoszlai">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Edit Domoszlai | Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- Or SVG -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"> 
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+
+<!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">    
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
+    <!-- CSS (always last) -->
+   <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+
+
+
+
+<body>
+
+    
+ <!-- navigation -->
+  
+
+  <!-- Navigation -->
+
+<header class="nav">
+
+    <div class="nav__right">
+
+        <nav class="nav__menu" aria-label="Primary">
+
+            <a href="#portfolio">
+                <span>Work</span>
+            </a>
+
+            <a href="#about">
+                <span>About</span>
+            </a>
+
+            <a href="#contact">
+                <span>Contact</span>
+            </a>
+
+        </nav>
+
+
+        <button
+            class="nav__toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- Mobile Navigation -->
+
+<nav
+    id="mobile-menu"
+    class="nav__mobile-menu"
+    aria-label="Mobile navigation"
+>
+    <a href="#portfolio">
+        <span>Work</span>
+    </a>
+
+    <a href="#about">
+        <span>About</span>
+    </a>
+
+    <a href="#contact">
+        <span>Contact</span>
+    </a>
+</nav>
+
+<!-- Mobile Navigation -->
+
+<nav
+    id="mobile-menu"
+    class="nav__mobile-menu"
+    aria-label="Mobile navigation"
+>
+    <a href="#portfolio">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+  
+
+
+
+  <main>
+    <!-- Video background -->
+    <section id="home">
+      <video
+        class="home__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="/assets/img/wesite2..mp4"
+      >
+        <source src="assets/img/wesite2..mp4" type="video/mp4" />
+      </video>
+
+
+<div class="home__subtitle">
+    <h1 class="welcome-title" aria-label="Welcome">
+      
+        <span>E</span>
+        <span>D</span>
+        <span>I</span>
+        <span>T</span>
+        <span>_</span>
+        <span>E</span>
+        <span>D</span>
+    </h1>
+</div>
+ </section>
+
+
+
+
+<!-- Main page starts! -->
+
+<div class="page-content">
+
+
+
+<!-- =========================================
+     Portfolio / Creations
+========================================= -->
+
+<section id="portfolio" class="portfolio-section py-5">
+
+    <div class="container">
+
+
+        <!-- =====================================
+             Portfolio Heading
+        ====================================== -->
+
+        <div class="portfolio-heading">
+
+            <h2 class="creations-title" aria-label="Creations">
+                <span>C</span>
+                <span>R</span>
+                <span>E</span>
+                <span>A</span>
+                <span>T</span>
+                <span>I</span>
+                <span>O</span>
+                <span>N</span>
+                <span>S</span>
+            </h2>
+
+        </div>
+
+ <!-- =====================================
+             Portfolio Filtering
+        ====================================== -->
+
+<div class="portfolio-filter" aria-label="Filter creations by duration">
+
+    <button
+        class="portfolio-filter__button is-active"
+        type="button"
+        data-filter="all"
+        aria-pressed="true"
+    >
+        ALL
+    </button>
+
+    <button
+        class="portfolio-filter__button"
+        type="button"
+        data-filter="long"
+        aria-pressed="false"
+    >
+        20–40 MIN
+    </button>
+
+    <button
+        class="portfolio-filter__button"
+        type="button"
+        data-filter="medium"
+        aria-pressed="false"
+    >
+        ~10 MIN
+    </button>
+
+    <button
+        class="portfolio-filter__button"
+        type="button"
+        data-filter="other"
+        aria-pressed="false"
+    >
+        OTHER
+    </button>
+
+</div>
+
+
+        <!-- =====================================
+             Portfolio Grid
+        ====================================== -->
+
+        <div class="row g-4">
+
+
+            <!-- =================================
+                 01 — ZAJ
+            ================================== -->
+
+            <div class="col-12 col-lg-4 portfolio-project" data-duration="long">
+
+                <a
+                    href="pages/zaj.html"
+                    class="portfolio-item"
+                    aria-label="View ZAJ"
+                >
+
+                    <img
+                        class="portfolio-image"
+                        src="assets/img/zaj1.jpg"
+                        alt="ZAJ choreography"
+                    >
+
+
+                    <div class="portfolio-stripe">
+
+                        <!-- Default title -->
+
+                        <div class="portfolio-title">
+                            <h3>ZAJ</h3>
+                        </div>
+
+
+                        <!-- Hover CTA -->
+
+                        <div class="portfolio-cta">
+
+                            <span>Learn more</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================
+                 02 — PROJECT TWO
+            ================================== -->
+
+            <div class="col-12 col-lg-4 portfolio-project" data-duration="long">
+
+
+                <a
+                    href="pages/project-2.html"
+                    class="portfolio-item"
+                    aria-label="View Project Two"
+                >
+
+                    <img
+                        class="portfolio-image"
+                        src="assets/img/sirius2.jpg"
+                        alt="Project Two choreography"
+                    >
+
+
+                    <div class="portfolio-stripe">
+
+                        <div class="portfolio-title">
+                            <h3>Sirius</h3>
+                        </div>
+
+                        <div class="portfolio-cta">
+
+                            <span>Learn more</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================
+                 03 — PROJECT THREE
+            ================================== -->
+
+            <div class="col-12 col-lg-4 portfolio-project" data-duration="long">
+
+
+                <a
+                    href="pages/project-3.html"
+                    class="portfolio-item"
+                    aria-label="View Project Three"
+                >
+
+                    <img
+                        class="portfolio-image"
+                        src="assets/img/fine_day.jpg"
+                        alt="Project Three choreography"
+                    >
+
+
+                    <div class="portfolio-stripe">
+
+                        <div class="portfolio-title">
+                            <h3>Fine Day</h3>
+                        </div>
+
+                        <div class="portfolio-cta">
+
+                            <span>Learn more</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================
+                 04 — PROJECT FOUR
+            ================================== -->
+
+            <div class="col-12 col-lg-4 portfolio-project" data-duration="other">
+
+
+                <a
+                    href="pages/project-4.html"
+                    class="portfolio-item"
+                    aria-label="View Project Four"
+                >
+
+                    <img
+                        class="portfolio-image"
+                        src="assets/img/letra.jpg"
+                        alt="Project Four choreography"
+                    >
+
+
+                    <div class="portfolio-stripe">
+
+                        <div class="portfolio-title">
+                            <h3>LÉT(ra)</h3>
+                        </div>
+
+                        <div class="portfolio-cta">
+
+                            <span>Learn more</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================
+                 05 — PROJECT FIVE
+            ================================== -->
+
+            <div class="col-12 col-lg-4 portfolio-project" data-duration="long">
+
+
+                <a
+                    href="pages/project-5.html"
+                    class="portfolio-item"
+                    aria-label="View Project Five"
+                >
+
+                    <img
+                        class="portfolio-image"
+                        src="assets/img/gates1.jpg"
+                        alt="Project Five choreography"
+                    >
+
+
+                    <div class="portfolio-stripe">
+
+                        <div class="portfolio-title">
+                            <h3>Liminal</h3>
+                        </div>
+
+                        <div class="portfolio-cta">
+
+                            <span>Learn more</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================
+                 06 — PROJECT SIX
+            ================================== -->
+
+            <div class="col-12 col-lg-4 portfolio-project" data-duration="medium">
+
+
+                <a
+                    href="pages/project-6.html"
+                    class="portfolio-item"
+                    aria-label="View Project Six"
+                >
+
+                    <img
+                        class="portfolio-image"
+                        src="assets/img/project-6.jpg"
+                        alt="Project Six choreography"
+                    >
+
+
+                    <div class="portfolio-stripe">
+
+                        <div class="portfolio-title">
+                            <h3>Emergence</h3>
+                        </div>
+
+                        <div class="portfolio-cta">
+
+                            <span>Learn more</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================
+                 07 — PROJECT SEVEN
+            ================================== -->
+
+            <div class="col-12 col-lg-4 portfolio-project" data-duration="long">
+
+
+                <a
+                    href="pages/project-7.html"
+                    class="portfolio-item"
+                    aria-label="View Project Seven"
+                >
+
+                    <img
+                        class="portfolio-image"
+                        src="assets/img/project-7.jpg"
+                        alt="Project Seven choreography"
+                    >
+
+
+                    <div class="portfolio-stripe">
+
+                        <div class="portfolio-title">
+                            <h3>Through this pouring rain</h3>
+                        </div>
+
+                        <div class="portfolio-cta">
+
+                            <span>Learn more</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================
+                 08 — PROJECT EIGHT
+            ================================== -->
+
+            <div class="col-12 col-lg-4 portfolio-project" data-duration="other">
+
+
+                <a
+                    href="pages/project-8.html"
+                    class="portfolio-item"
+                    aria-label="View Project Eight"
+                >
+
+                    <img
+                        class="portfolio-image"
+                        src="assets/img/project-8.jpg"
+                        alt="Project Eight choreography"
+                    >
+
+
+                    <div class="portfolio-stripe">
+
+                        <div class="portfolio-title">
+                            <h3>CACF</h3>
+                        </div>
+
+                        <div class="portfolio-cta">
+
+                            <span>Learn more</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================
+                 09 — PROJECT NINE
+            ================================== -->
+
+            <div class="col-12 col-lg-4 portfolio-project" data-duration="medium">
+
+
+                <a
+                    href="pages/project-9.html"
+                    class="portfolio-item"
+                    aria-label="View Project Nine"
+                >
+
+                    <img
+                        class="portfolio-image"
+                        src="assets/img/project-9.jpg"
+                        alt="Project Nine choreography"
+                    >
+
+
+                    <div class="portfolio-stripe">
+
+                        <div class="portfolio-title">
+                            <h3>Competitive Plasticity</h3>
+                        </div>
+
+                        <div class="portfolio-cta">
+
+                            <span>Learn more</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+
+      <!-- =================================
+                 10 — PROJECT SEVEN
+            ================================== -->
+
+            <div class="col-12 col-lg-4 portfolio-project" data-duration="medium">
+
+
+                <a
+                    href="pages/project-10.html"
+                    class="portfolio-item"
+                    aria-label="View Project Seven"
+                >
+
+                    <img
+                        class="portfolio-image"
+                        src="assets/img/project-10.jpg"
+                        alt="Project Seven choreography"
+                    >
+
+
+                    <div class="portfolio-stripe">
+
+                        <div class="portfolio-title">
+                            <h3>selfie-sh</h3>
+                        </div>
+
+                        <div class="portfolio-cta">
+
+                            <span>Learn more</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================
+                 08 — PROJECT 11
+            ================================== -->
+
+            <div class="col-12 col-lg-4 portfolio-project" data-duration="other">
+
+
+                <a
+                    href="pages/project-11.html"
+                    class="portfolio-item"
+                    aria-label="View Project Eight"
+                >
+
+                    <img
+                        class="portfolio-image"
+                        src="assets/img/project-11.jpg"
+                        alt="Project Eight choreography"
+                    >
+
+
+                    <div class="portfolio-stripe">
+
+                        <div class="portfolio-title">
+                            <h3>Carmen</h3>
+                        </div>
+
+                        <div class="portfolio-cta">
+
+                            <span>Learn more</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================
+                 09 — PROJECT 12
+            ================================== -->
+
+            <div class="col-12 col-lg-4 portfolio-project" data-duration="medium">
+
+
+                <a
+                    href="pages/project-12.html"
+                    class="portfolio-item"
+                    aria-label="View Project Nine"
+                >
+
+                    <img
+                        class="portfolio-image"
+                        src="assets/img/project-12.jpg"
+                        alt="Project Nine choreography"
+                    >
+
+
+                    <div class="portfolio-stripe">
+
+                        <div class="portfolio-title">
+                            <h3>Angels</h3>
+                        </div>
+
+                        <div class="portfolio-cta">
+
+                            <span>Learn more</span>
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+</div>
+
+    <!-- JS -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

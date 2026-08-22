@@ -1,0 +1,133 @@
+/* =========================================
+   Base
+========================================= */
+
+:root {
+    --color-black: #111;
+    --color-white: #fff;
+
+    --color-grey-light: #e6e6e6;
+    --color-grey: #cfcfcf;
+
+    --font-display: "Monoton", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    --transition-fast: 0.3s ease;
+    --transition-medium: 0.5s ease;
+}
+
+
+
+
+
+
+
+
+
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+
+    color: #111;
+    background-color: #fdfcfc;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Bootstrap font override */
+
+:root {
+    --bs-body-font-family: "Inter", sans-serif;
+}
+
+/* Images */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Forms */
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Links */
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+/* Lists */
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+p {
+    margin: 0;
+}
+
+/* Sections */
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Selection */
+
+::selection {
+    background: #111;
+    color: #fff;
+}

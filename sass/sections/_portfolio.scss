@@ -1,0 +1,485 @@
+
+/* =========================================
+   Portfolio Heading
+========================================= */
+
+.portfolio-heading {
+    position: relative;
+    margin-bottom: 48px;
+    overflow: hidden;
+}
+
+
+.creations-title {
+    position: relative;
+
+    display: inline-flex;
+
+    margin-left: 0;
+
+    font-size: clamp(2.5rem,2.5vw, 2.5rem);
+    font-weight: 400;
+
+    line-height: 1;
+    text-transform: lowercase;
+
+
+    span {
+        display: inline-block;
+
+        opacity: 0;
+
+        clip-path: inset(0 100% 0 0);
+    }
+
+
+    /* Horizontal graphic line */
+
+    &::after {
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        top: 55%;
+
+        width: 100%;
+        height: 2px;
+
+        background: #111;
+
+        transform: scaleX(0);
+        transform-origin: left;
+
+        z-index: -1;
+    }
+}
+
+
+/* =========================================
+   CREATIONS ANIMATION
+========================================= */
+
+.creations-title {
+
+    span {
+        display: inline-block;
+
+        opacity: 0;
+    }
+}
+
+
+.creations-title.is-visible {
+
+    span:nth-child(odd) {
+        animation: creationFromLeft 0.7s
+            cubic-bezier(.77, 0, .18, 1)
+            forwards;
+    }
+
+    span:nth-child(even) {
+        animation: creationFromRight 0.7s
+            cubic-bezier(.77, 0, .18, 1)
+            forwards;
+    }
+
+
+    span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    span:nth-child(2) {
+        animation-delay: 0.08s;
+    }
+
+    span:nth-child(3) {
+        animation-delay: 0.16s;
+    }
+
+    span:nth-child(4) {
+        animation-delay: 0.24s;
+    }
+
+    span:nth-child(5) {
+        animation-delay: 0.32s;
+    }
+
+    span:nth-child(6) {
+        animation-delay: 0.40s;
+    }
+
+    span:nth-child(7) {
+        animation-delay: 0.48s;
+    }
+
+    span:nth-child(8) {
+        animation-delay: 0.56s;
+    }
+
+    span:nth-child(9) {
+        animation-delay: 0.64s;
+    }
+}
+
+
+@keyframes creationFromLeft {
+
+    0% {
+        opacity: 0;
+
+        clip-path: inset(0 100% 0 0);
+
+        transform: translateX(-16px);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+
+        clip-path: inset(0 0 0 0);
+
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes creationFromRight {
+
+    0% {
+        opacity: 0;
+
+        clip-path: inset(0 0 0 100%);
+
+        transform: translateX(16px);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+
+        clip-path: inset(0 0 0 0);
+
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   PORTFOLIO FILTER
+========================================= */
+
+.portfolio-filter {
+    display: inline-flex;
+
+    margin-bottom: 40px;
+
+    border: 1px solid #111;
+
+    background: #fff;
+
+    overflow: hidden;
+}
+
+
+.portfolio-filter__button {
+    position: relative;
+
+    padding: 11px 20px;
+
+    border: 0;
+    border-right: 1px solid #111;
+
+    background: transparent;
+    color: #111;
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease;
+
+
+    &:last-child {
+        border-right: 0;
+    }
+
+
+    &:hover {
+        background: #e6e6e6;
+    }
+
+
+    &.is-active {
+        background: #111;
+        color: #fff;
+    }
+}
+
+
+/* =========================================
+   FILTERED PROJECTS
+========================================= */
+
+.portfolio-project {
+    transition:
+        opacity 0.3s ease,
+        transform 0.4s cubic-bezier(.77, 0, .18, 1);
+}
+
+
+.portfolio-project.is-hidden {
+    display: none;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767.98px) {
+
+    .portfolio-filter {
+        display: flex;
+
+        width: 100%;
+
+        margin-bottom: 30px;
+    }
+
+
+    .portfolio-filter__button {
+        flex: 1;
+
+        padding: 10px 4px;
+
+        font-size: 0.56rem;
+        letter-spacing: 0.03em;
+    }
+}
+
+
+
+
+
+
+
+
+.portfolio-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.portfolio-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+
+
+
+
+
+/* =========================================
+   PORTFOLIO STRIPE
+========================================= */
+/* =========================================
+   PORTFOLIO STRIPE
+========================================= */
+
+.portfolio-stripe {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+
+    width: 100%;
+    height: 58px;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+
+    /* Full-width background that appears on hover */
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        background: rgba(255, 255, 255, 0.94);
+
+        transform: scaleX(0);
+        transform-origin: left;
+
+        transition:
+            transform 0.55s cubic-bezier(.77, 0, .18, 1);
+
+        z-index: 0;
+    }
+}
+
+
+/* =========================================
+   DEFAULT TITLE
+========================================= */
+
+.portfolio-title {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+
+    width: fit-content;
+
+    padding: 17px 24px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    opacity: 1;
+
+    z-index: 2;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.45s cubic-bezier(.77, 0, .18, 1);
+
+
+    h3 {
+        margin: 0;
+
+        font-size: 1rem;
+        font-weight: 500;
+
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+
+        white-space: nowrap;
+    }
+}
+
+
+/* =========================================
+   LEARN MORE
+========================================= */
+
+.portfolio-cta {
+    position: absolute;
+
+    top: 50%;
+    left: 24px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    opacity: 0;
+
+    transform:
+        translateY(-50%)
+        translateX(-20px);
+
+    z-index: 2;
+
+    font-size: 0.75rem;
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.5s cubic-bezier(.77, 0, .18, 1);
+
+
+    i {
+        font-size: 0.8rem;
+
+        transition:
+            transform 0.45s cubic-bezier(.77, 0, .18, 1);
+    }
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.portfolio-item:hover {
+
+    /* Full stripe grows across image */
+
+    .portfolio-stripe::before {
+        transform: scaleX(1);
+    }
+
+
+    /* Project title disappears */
+
+    .portfolio-title {
+        opacity: 0;
+
+        transform:
+            translateY(-50%)
+            translateX(18px);
+    }
+
+
+    /* CTA enters */
+
+    .portfolio-cta {
+        opacity: 1;
+
+        transform:
+            translateY(-50%)
+            translateX(0);
+
+        transition-delay: 0.18s;
+    }
+
+
+    .portfolio-cta i {
+        transform: translateX(5px);
+    }
+
+
+    /* Image movement */
+
+    .portfolio-image {
+        transform: scale(1.035);
+    }
+}
