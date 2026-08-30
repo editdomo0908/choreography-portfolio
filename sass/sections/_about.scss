@@ -58,6 +58,8 @@
 
 .about__image {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 
     overflow: hidden;
 
@@ -65,15 +67,12 @@
         display: block;
 
         width: 100%;
-        height: auto;
-
-        aspect-ratio: 4 / 5;
+        height: 320px;
 
         object-fit: cover;
-        object-position: center;
+        object-position: center 25%;
     }
 }
-
 
 /* =========================================
    BIO
@@ -140,7 +139,7 @@
     position: relative;
 
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 6 / 4;
 
     overflow: hidden;
 
