@@ -68,7 +68,7 @@
                 <span>About</span>
             </a>
 
-            <a href="#contact">
+            <a href="#" class="contact-trigger">
                 <span>Contact</span>
             </a>
 
@@ -106,7 +106,7 @@
         <span>About</span>
     </a>
 
-    <a href="#contact">
+    <a href="#" class="contact-trigger">
         <span>Contact</span>
     </a>
 </nav>
@@ -850,6 +850,49 @@
 
 
 </div>
+
+
+
+<!-- =========================================
+     Contact Popup
+========================================== -->
+
+<div class="contact-popup" aria-hidden="true">
+
+    <div class="contact-popup__backdrop"></div>
+
+    <div
+        class="contact-popup__window"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Contact Edit Domoszlai"
+    >
+
+        <button
+            class="contact-popup__close"
+            type="button"
+            aria-label="Close contact window"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <span class="contact-popup__label">
+            Get in touch
+        </span>
+
+        <a
+            class="contact-popup__email"
+            href="mailto:edit.domoszlai@gmail.com"
+        >
+            edit.domoszlai@gmail.com
+        </a>
+
+    </div>
+
+</div>
+
+
+
 
     <!-- JS -->
     <script src="assets/js/script.js"></script>

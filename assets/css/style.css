@@ -709,6 +709,99 @@ section {
   }
 }
 /* =========================================
+   CONTACT POPUP
+========================================= */
+.contact-popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-top: 95px;
+  padding-right: 30px;
+  z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.contact-popup.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* BACKDROP */
+.contact-popup__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* WINDOW */
+.contact-popup__window {
+  position: relative;
+  width: calc(100% - 40px);
+  max-width: 420px;
+  padding: 42px 40px;
+  background: #fff;
+  color: #111;
+  z-index: 1;
+  transform: translateY(10px);
+  transition: transform 0.35s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.contact-popup.is-open .contact-popup__window {
+  transform: translateY(0);
+}
+
+/* LABEL */
+.contact-popup__label {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* EMAIL */
+.contact-popup__email {
+  display: inline-block;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 400;
+  border-bottom: 1px solid #111;
+  transition: opacity 0.3s ease;
+}
+.contact-popup__email:hover {
+  opacity: 0.55;
+}
+
+/* CLOSE */
+.contact-popup__close {
+  position: absolute;
+  top: 15px;
+  right: 17px;
+  padding: 5px;
+  border: 0;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+.contact-popup__close:hover {
+  transform: rotate(90deg);
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+  .contact-popup__window {
+    padding: 38px 25px 32px;
+  }
+}
+/* =========================================
    Portfolio Heading
 ========================================= */
 .portfolio-heading {
