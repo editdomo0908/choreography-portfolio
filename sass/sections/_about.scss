@@ -1,0 +1,152 @@
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.about-page {
+    min-height: 100vh;
+
+    background: #fff;
+    color: #111;
+}
+
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about {
+    padding-top: 145px;
+    padding-bottom: 120px;
+    overflow: visible;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.about__heading {
+    margin-bottom: 60px;
+
+    h1 {
+        margin: 0;
+
+        font-family: "Monoton", sans-serif;
+        font-size: clamp(3rem, 3vw, 3rem);
+        font-weight: 400;
+        line-height: 1;
+
+        text-transform: uppercase;
+    }
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.about__content {
+    width: 100%;
+    max-width: 1050px;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.about__image {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 4 / 5;
+
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+/* =========================================
+   BIO
+========================================= */
+
+.about__bio {
+    max-width: 620px;
+
+    p {
+        margin: 0;
+
+        font-size: clamp(0.9rem, 0.9vw, 0.9rem);
+        font-weight: 400;
+        line-height: 1.8;
+    }
+
+    p + p {
+        margin-top: 25px;
+    }
+}
+
+
+/* =========================================
+   INTRO LINE
+========================================= */
+
+.about__intro {
+    margin-bottom: 35px;
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767.98px) {
+
+    .about {
+        padding-top: 110px;
+        padding-bottom: 80px;
+    }
+
+    .about__heading {
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: clamp(2rem, 2vw, 2rem) !important;
+        }
+    }
+
+    .about__image {
+        max-width: 100%;
+
+        img {
+            aspect-ratio: 4 / 5;
+        }
+    }
+
+    .about__bio {
+        max-width: none;
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    }
+
+    .about__intro {
+        margin-bottom: 25px;
+    }
+
+}
