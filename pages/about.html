@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -32,7 +32,9 @@
     <title>About | Edit Domoszlai</title>
 
 
-    <!-- Favicon -->
+    <!-- =========================================
+         Favicon
+    ========================================== -->
 
     <link
         rel="icon"
@@ -47,7 +49,9 @@
     >
 
 
-    <!-- Bootstrap CSS -->
+    <!-- =========================================
+         Bootstrap CSS
+    ========================================== -->
 
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -57,7 +61,9 @@
     >
 
 
-    <!-- Font Awesome -->
+    <!-- =========================================
+         Font Awesome
+    ========================================== -->
 
     <link
         rel="stylesheet"
@@ -68,7 +74,9 @@
     >
 
 
-    <!-- Compiled Sass -->
+    <!-- =========================================
+         Compiled Sass
+    ========================================== -->
 
     <link
         rel="stylesheet"
@@ -89,6 +97,8 @@
 
         <div class="nav__right">
 
+            <!-- Desktop Navigation -->
+
             <nav
                 class="nav__menu"
                 aria-label="Primary"
@@ -102,7 +112,7 @@
                     <span>About</span>
                 </a>
 
-               <a href="#" class="contact-trigger">
+                <a href="#" class="contact-trigger">
                     <span>Contact</span>
                 </a>
 
@@ -146,9 +156,10 @@
             <span>About</span>
         </a>
 
-       <a href="#" class="contact-trigger">
-                    <span>Contact</span>
-                </a>
+        <a href="#" class="contact-trigger">
+            <span>Contact</span>
+        </a>
+
     </nav>
 
 
@@ -163,7 +174,10 @@
 
             <div class="container">
 
-                <!-- Heading -->
+
+                <!-- =================================
+                     Heading
+                ================================== -->
 
                 <div class="about__heading">
 
@@ -172,7 +186,10 @@
                 </div>
 
 
-                <!-- Main content -->
+
+                <!-- =================================
+                     Main Content
+                ================================== -->
 
                 <div class="about__content">
 
@@ -180,33 +197,17 @@
 
 
                         <!-- =================================
-                             Portrait
-                        ================================== -->
-
-                        <div class="col-12 col-lg-5">
-
-                            <div class="about__image">
-
-                                <img
-                                    src="../assets/img/aboutme.png"
-                                    alt="Edit Domoszlai"
-                                >
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- =================================
                              Biography
+                             Desktop: right
+                             Mobile: first
                         ================================== -->
 
-                        <div class="col-12 col-lg-7">
+                        <div
+                            class="col-12 col-lg-7 order-1 order-lg-2 about__bio-column"
+                        >
 
                             <div class="about__bio">
 
-                              
 
                                 <p>
                                     Edit Domoszlai is a British-Hungarian choreographer
@@ -252,6 +253,389 @@
 
 
                             </div>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             Headshot + Dance Images
+                             Desktop: left
+                             Mobile: second
+                        ================================== -->
+
+                        <div
+                            class="col-12 col-lg-5 order-2 order-lg-1"
+                        >
+
+
+                            <!-- =================================
+                                 Headshot
+                            ================================== -->
+
+                            <div class="about__image">
+
+                                <img
+                                    src="../assets/img/aboutme.png"
+                                    alt="Edit Domoszlai"
+                                >
+
+                            </div>
+
+
+
+                            <!-- =================================
+                                 Dance Image Carousel
+                            ================================== -->
+
+                            <div class="about-carousel">
+
+
+                                <div class="about-carousel__track">
+
+
+                                    <!-- =============================
+                                         Image 1
+                                    ============================== -->
+
+                                    <div class="about-carousel__slide is-active">
+
+                                        <img
+                                            src="../assets/img/wayne.JPG"
+                                            alt="Edit Domoszlai performing Pre-Sentient"
+                                        >
+
+                                        <div class="about-carousel__credit">
+
+                                            <span>
+                                                Photo: Miguel Altunaga
+                                            </span>
+
+                                            <span>
+                                                Piece: Pre-Sentient
+                                            </span>
+
+                                            <span>
+                                                Choreography: Wayne McGregor
+                                            </span>
+
+                                            <span>
+                                                2019
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- =============================
+                                         Image 2
+                                    ============================== -->
+
+                                    <div class="about-carousel__slide">
+
+                                        <img
+                                            src="../assets/img/ch3.png"
+                                            alt="Edit Domoszlai performing Love Chapter 3"
+                                        >
+
+                                        <div class="about-carousel__credit">
+
+                                            <span>
+                                                Photo: Photographer Name
+                                            </span>
+
+                                            <span>
+                                                Piece: Love Chapter 3
+                                            </span>
+
+                                            <span>
+                                                Choreography: Sharon Eyal
+                                            </span>
+
+                                            <span>
+                                                2022
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- =============================
+                                         Image 3
+                                    ============================== -->
+
+                                    <div class="about-carousel__slide">
+
+                                        <img
+                                            src="../assets/img/dance-3.jpg"
+                                            alt="Edit Domoszlai performing"
+                                        >
+
+                                        <div class="about-carousel__credit">
+
+                                            <span>
+                                                Photo: Photographer Name
+                                            </span>
+
+                                            <span>
+                                                Piece: Piece Title
+                                            </span>
+
+                                            <span>
+                                                Choreography: Choreographer Name
+                                            </span>
+
+                                            <span>
+                                                Year
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- =============================
+                                         Image 4
+                                    ============================== -->
+
+                                    <div class="about-carousel__slide">
+
+                                        <img
+                                            src="../assets/img/dance-4.jpg"
+                                            alt="Edit Domoszlai performing"
+                                        >
+
+                                        <div class="about-carousel__credit">
+
+                                            <span>
+                                                Photo: Photographer Name
+                                            </span>
+
+                                            <span>
+                                                Piece: Piece Title
+                                            </span>
+
+                                            <span>
+                                                Choreography: Choreographer Name
+                                            </span>
+
+                                            <span>
+                                                Year
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- =============================
+                                         Image 5
+                                    ============================== -->
+
+                                    <div class="about-carousel__slide">
+
+                                        <img
+                                            src="../assets/img/dance-5.jpg"
+                                            alt="Edit Domoszlai performing"
+                                        >
+
+                                        <div class="about-carousel__credit">
+
+                                            <span>
+                                                Photo: Photographer Name
+                                            </span>
+
+                                            <span>
+                                                Piece: Piece Title
+                                            </span>
+
+                                            <span>
+                                                Choreography: Choreographer Name
+                                            </span>
+
+                                            <span>
+                                                Year
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- =============================
+                                         Image 6
+                                    ============================== -->
+
+                                    <div class="about-carousel__slide">
+
+                                        <img
+                                            src="../assets/img/dance-6.jpg"
+                                            alt="Edit Domoszlai performing"
+                                        >
+
+                                        <div class="about-carousel__credit">
+
+                                            <span>
+                                                Photo: Photographer Name
+                                            </span>
+
+                                            <span>
+                                                Piece: Piece Title
+                                            </span>
+
+                                            <span>
+                                                Choreography: Choreographer Name
+                                            </span>
+
+                                            <span>
+                                                Year
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- =============================
+                                         Image 7
+                                    ============================== -->
+
+                                    <div class="about-carousel__slide">
+
+                                        <img
+                                            src="../assets/img/dance-7.jpg"
+                                            alt="Edit Domoszlai performing"
+                                        >
+
+                                        <div class="about-carousel__credit">
+
+                                            <span>
+                                                Photo: Photographer Name
+                                            </span>
+
+                                            <span>
+                                                Piece: Piece Title
+                                            </span>
+
+                                            <span>
+                                                Choreography: Choreographer Name
+                                            </span>
+
+                                            <span>
+                                                Year
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- =============================
+                                         Image 8
+                                    ============================== -->
+
+                                    <div class="about-carousel__slide">
+
+                                        <img
+                                            src="../assets/img/dance-8.jpg"
+                                            alt="Edit Domoszlai performing"
+                                        >
+
+                                        <div class="about-carousel__credit">
+
+                                            <span>
+                                                Photo: Photographer Name
+                                            </span>
+
+                                            <span>
+                                                Piece: Piece Title
+                                            </span>
+
+                                            <span>
+                                                Choreography: Choreographer Name
+                                            </span>
+
+                                            <span>
+                                                Year
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- =================================
+                                     Previous
+                                ================================== -->
+
+                                <button
+                                    class="about-carousel__button about-carousel__button--prev"
+                                    type="button"
+                                    aria-label="Previous image"
+                                >
+
+                                    <i
+                                        class="fa-solid fa-arrow-left"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </button>
+
+
+
+                                <!-- =================================
+                                     Next
+                                ================================== -->
+
+                                <button
+                                    class="about-carousel__button about-carousel__button--next"
+                                    type="button"
+                                    aria-label="Next image"
+                                >
+
+                                    <i
+                                        class="fa-solid fa-arrow-right"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </button>
+
+
+
+                                <!-- =================================
+                                     Counter
+                                ================================== -->
+
+                                <div class="about-carousel__counter">
+
+                                    <span class="about-carousel__current">
+                                        01
+                                    </span>
+
+                                    <span>/</span>
+
+                                    <span>
+                                        08
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
 
                         </div>
 

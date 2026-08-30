@@ -525,3 +525,86 @@ if (contactTriggers.length > 0) {
     );
 
 }
+
+
+
+/* =========================================
+   ABOUT IMAGE CAROUSEL
+========================================= */
+
+const aboutCarousel =
+    document.querySelector(".about-carousel");
+
+
+if (aboutCarousel) {
+
+    const slides =
+        aboutCarousel.querySelectorAll(
+            ".about-carousel__slide"
+        );
+
+    const prevButton =
+        aboutCarousel.querySelector(
+            ".about-carousel__button--prev"
+        );
+
+    const nextButton =
+        aboutCarousel.querySelector(
+            ".about-carousel__button--next"
+        );
+
+    const counter =
+        aboutCarousel.querySelector(
+            ".about-carousel__current"
+        );
+
+
+    let currentSlide = 0;
+
+
+    function showSlide(index) {
+
+        slides.forEach((slide) => {
+            slide.classList.remove("is-active");
+        });
+
+
+        currentSlide =
+            (index + slides.length) %
+            slides.length;
+
+
+        slides[currentSlide].classList.add(
+            "is-active"
+        );
+
+
+        counter.textContent =
+            String(currentSlide + 1).padStart(
+                2,
+                "0"
+            );
+
+    }
+
+
+    nextButton.addEventListener(
+        "click",
+        () => {
+
+            showSlide(currentSlide + 1);
+
+        }
+    );
+
+
+    prevButton.addEventListener(
+        "click",
+        () => {
+
+            showSlide(currentSlide - 1);
+
+        }
+    );
+
+}

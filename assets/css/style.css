@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* https://www.youtube.com/watch?v=iJKCj8uAHz8
 option+shift+A to change for comment, 
 option+7 for brackets,
@@ -151,7 +152,7 @@ section {
 }
 
 /* =========================================
-   IMAGE
+   HEADSHOT
 ========================================= */
 .about__image {
   width: 100%;
@@ -171,10 +172,11 @@ section {
 ========================================= */
 .about__bio {
   max-width: 620px;
+  margin-left: 30px;
 }
 .about__bio p {
   margin: 0;
-  font-size: clamp(0.9rem, 0.9vw, 0.9rem);
+  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.8;
 }
@@ -194,6 +196,157 @@ section {
 }
 
 /* =========================================
+   ABOUT DANCE CAROUSEL
+========================================= */
+.about-carousel {
+  position: relative;
+  width: 100%;
+  margin-top: 22px;
+  /*
+     Important:
+     arrows are outside the image,
+     so this must remain visible
+  */
+  overflow: visible;
+}
+
+/* =========================================
+   CAROUSEL TRACK
+========================================= */
+.about-carousel__track {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #111;
+}
+
+/* =========================================
+   SLIDES
+========================================= */
+.about-carousel__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.55s ease, visibility 0.55s ease;
+}
+.about-carousel__slide.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+.about-carousel__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================================
+   PHOTO CREDIT STRIPE
+========================================= */
+.about-carousel__credit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 14px;
+  padding: 11px 15px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #111;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  transform: translateY(100%);
+  transition: transform 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.about-carousel__credit span:not(:last-child)::after {
+  content: "·";
+  margin-left: 14px;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+/* Reveal credit */
+.about-carousel__slide:hover .about-carousel__credit {
+  transform: translateY(0);
+}
+
+/* =========================================
+   ARROWS — OUTSIDE IMAGE
+========================================= */
+.about-carousel__button {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  background: #d3d3d3;
+  color: #111;
+  z-index: 10;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: background 0.3s ease, opacity 0.3s ease, transform 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.about-carousel__button i {
+  font-size: 0.85rem;
+}
+.about-carousel__button:hover {
+  background: #a7a6a6;
+}
+
+/* Previous */
+.about-carousel__button--prev {
+  left: -48px;
+}
+.about-carousel__button--prev:hover {
+  transform: translateY(-50%) translateX(-4px);
+}
+
+/* Next */
+.about-carousel__button--next {
+  right: -48px;
+}
+.about-carousel__button--next:hover {
+  transform: translateY(-50%) translateX(4px);
+}
+
+/* =========================================
+   COUNTER
+========================================= */
+.about-carousel__counter {
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  z-index: 10;
+  padding: 4px 7px;
+  background: rgba(255, 255, 255, 0.88);
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+@media (max-width: 991.98px) {
+  .about-carousel__button--prev {
+    left: -38px;
+  }
+  .about-carousel__button--next {
+    right: -38px;
+  }
+}
+/* =========================================
    MOBILE
 ========================================= */
 @media (max-width: 767.98px) {
@@ -201,18 +354,21 @@ section {
     padding-top: 110px;
     padding-bottom: 80px;
   }
+  /* Heading */
   .about__heading {
     margin-bottom: 2rem;
   }
   .about__heading h1 {
-    font-size: clamp(2rem, 2vw, 2rem) !important;
+    font-size: 2rem;
   }
+  /* Headshot */
   .about__image {
     max-width: 100%;
   }
   .about__image img {
     aspect-ratio: 4/5;
   }
+  /* Bio */
   .about__bio {
     max-width: none;
   }
@@ -222,6 +378,40 @@ section {
   }
   .about__intro {
     margin-bottom: 25px;
+  }
+  /* Carousel */
+  .about-carousel {
+    margin-top: 16px;
+  }
+  .about-carousel__track {
+    aspect-ratio: 4/3;
+  }
+  /* Arrows closer to image on mobile */
+  .about-carousel__button {
+    width: 32px;
+    height: 32px;
+  }
+  .about-carousel__button i {
+    font-size: 0.75rem;
+  }
+  .about-carousel__button--prev {
+    left: -15px;
+  }
+  .about-carousel__button--next {
+    right: -15px;
+  }
+  /*
+     Hover isn't reliable on touch devices,
+     so keep credits visible
+  */
+  .about-carousel__credit {
+    transform: translateY(0);
+    padding: 9px 11px;
+    gap: 3px 9px;
+    font-size: 0.52rem;
+  }
+  .about-carousel__credit span:not(:last-child)::after {
+    margin-left: 9px;
   }
 }
 /* =========================================
