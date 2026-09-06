@@ -455,3 +455,110 @@
     }
 
 }
+
+
+/* =========================================
+   SELECTED PRESS
+========================================= */
+
+.about-reviews {
+    margin-top: 40px;
+
+    h2 {
+        margin-bottom: 22px;
+
+        font-family: "Inter", sans-serif;
+        font-size: 0.65rem;
+        font-weight: 600;
+
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+    }
+}
+
+
+.about-review {
+    display: block;
+
+    padding: 8px 0;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.16);
+
+    color: #111;
+    text-decoration: none;
+
+    transition:
+        padding-left 0.35s cubic-bezier(.77, 0, .18, 1);
+
+
+    &:last-child {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+    }
+
+
+    p {
+        margin: 0 0 8px;
+
+        font-size: 0.8rem;
+        font-weight: 400;
+        line-height: 1.55;
+    }
+
+
+    cite {
+        display: flex;
+        align-items: center;
+
+        gap: 6px;
+
+        font-size: 0.62rem;
+        font-weight: 500;
+        font-style: normal;
+
+        letter-spacing: 0.08em;
+
+        text-transform: uppercase;
+
+        color: rgba(0, 0, 0, 0.5);
+
+
+        i {
+            font-size: 0.55rem;
+
+            transition:
+                transform 0.3s cubic-bezier(.77, 0, .18, 1);
+        }
+    }
+
+
+    &:hover {
+        padding-left: 6px;
+
+
+        cite i {
+            transform: translate(2px, -2px);
+        }
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767.98px) {
+
+    .about-reviews {
+        margin-top: 45px;
+    }
+
+
+    .about-review {
+        padding: 18px 0;
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+}
