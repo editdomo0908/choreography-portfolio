@@ -637,3 +637,19 @@
         }
     }
 }
+
+
+.zaj-poetic-intro {
+    max-width: 720px;
+    margin: 0 0 4rem 0;
+    padding: 1rem 0 1rem 1rem;
+
+    border-left: 1px solid currentColor;
+
+    font-size: clamp(0.8rem, 0.8vw, 0.8rem) !important;
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+    

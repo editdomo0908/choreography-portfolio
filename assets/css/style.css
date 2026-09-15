@@ -124,7 +124,6 @@ section {
 ========================================= */
 .about {
   padding-top: 145px;
-  padding-bottom: 120px;
   overflow: visible;
 }
 
@@ -438,9 +437,6 @@ section {
   text-decoration: none;
   transition: padding-left 0.35s cubic-bezier(0.77, 0, 0.18, 1);
 }
-.about-review:last-child {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
-}
 .about-review p {
   margin: 0 0 8px;
   font-size: 0.8rem;
@@ -487,7 +483,8 @@ section {
    FOOTER
 ========================================= */
 .site-footer {
-  padding: 28px 0;
+  padding: 28px 0px;
+  margin-top: 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
   background: #fff;
   color: rgba(0, 0, 0, 0.5);
@@ -1790,6 +1787,16 @@ section {
 .project-reviews cite a {
   font-size: inherit;
   color: inherit;
+}
+
+.zaj-poetic-intro {
+  max-width: 720px;
+  margin: 0 0 4rem 0;
+  padding: 1rem 0 1rem 1rem;
+  border-left: 1px solid currentColor;
+  font-size: clamp(0.8rem, 0.8vw, 0.8rem) !important;
+  font-weight: 300;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=style.css.map */
